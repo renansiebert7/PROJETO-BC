@@ -9,6 +9,8 @@ function convertValues() {
 
     const euroToday = 6.2
     const dolarToday = 5.2
+    const libraToday = 7.63
+    const bitcoinToday = 591.043
 
     // Verifica se o valor de entrada é um número válido
     if (isNaN(inputCurrencyValue)) {
@@ -35,6 +37,29 @@ function convertValues() {
             currency: "EUR"
         }).format(inputCurrencyValue / euroToday)
     }
+
+      if (currencySelect.value == "libra") { // SE NO SELECT ESTIVER SELECIONADO LIBRA, ENTRE AQUI
+        valorMoeda2.innerHTML = new Intl.NumberFormat("en-GB", {
+            style: "currency",
+            currency: "GBP"
+        }).format(inputCurrencyValue / libraToday)
+    }
+
+    
+      if (currencySelect.value == "bitcoin") { // SE NO SELECT ESTIVER SELECIONADO LIBRA, ENTRE AQUI
+        valorMoeda2.innerHTML = new Intl.NumberFormat("en-GB", {
+            style: "currency",
+            currency: "GBP"
+        }).format(inputCurrencyValue / libraToday)
+    }
+
+        if (currencySelect.value == "bitcoin") { // SE NO SELECT ESTIVER SELECIONADO BITCOIN, ENTRE AQUI
+        // Calcule o valor em Bitcoin (ajuste a lógica conforme necessário)
+        let valorEmBitcoin = inputCurrencyValue / bitcoinToday; // Supondo que bitcoinToday seja o valor atual do Bitcoin em relação à moeda base
+
+        // Exiba o valor em Bitcoin com duas casas decimais
+        valorMoeda2.innerHTML = valorEmBitcoin.toFixed(8) + " BTC"; // Formata para 8 casas decimais
+}
 }
 
 function changeCurrency(){
@@ -51,9 +76,19 @@ function changeCurrency(){
         currencyImage.src = "./assets/euro.png"
     }
 
+     if(currencySelect.value == "libra") {
+        currencyName.innerHTML = "Libra"
+        currencyImage.src = "./assets/libra.png"
+    }
+
+     if(currencySelect.value == "bitcoin") {
+        currencyName.innerHTML = "Bitcoin"
+        currencyImage.src = "./assets/bitcoin.png"
+    }
     convertValues()
 }
 
 
 currencySelect.addEventListener("change", changeCurrency)
 convertButton.addEventListener("click", convertValues)
+
