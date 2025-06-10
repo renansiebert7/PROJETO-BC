@@ -6,12 +6,15 @@
 <br>
 <h3> NO PROJETO FOI UTILIZADO:</h3>
 <br>
-<h3> HTML </h3>
-<h3> CSS </h3>
-<h3> JAVA SCRIPT </h3>
-<br>
+<ul>
+<li> HTML </li>
+<li> CSS </li>
+<li> JAVA SCRIPT </li>
+</ul>
 <br>
 <h3> ACESSE O PROJETO AQUI:</h3>
 https://renansiebert7.github.io/PROJETO-CONVERT-MONEY/
 <br>
-<img https://github.com/renansiebert7/PROJETO-CONVERT-MONEY/blob/master/assets/convertmoney.png?raw=true>
+<br>
+<img src="https://github.com/renansiebert7/PROJETO-CONVERT-MONEY/blob/master/assets/convertmoney.png?raw=true">
+<br>
