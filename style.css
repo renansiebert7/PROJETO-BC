@@ -6,18 +6,22 @@
     outline: none;
 }
 
-body {
-    background-color: rgba(138, 81, 252, 1);
+.img-fundo {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 
 .img-logo {
     width: 300px;
     height: 300px;
     margin: 20px auto;
-
     display: block;         /*macete para centralizar imagem*/
     margin-left: auto;
     margin-right: auto;
+    border-radius: 80px;
 }
 
 main {
@@ -75,7 +79,9 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 20px; /* Adicione esta linha para espaço abaixo do conversor */
 }
+
 
 div img {
     width: 44px;
